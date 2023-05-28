@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nginx:
+    image: nginx
+    ports:
+      - 8080:80
+    labels:
+      - "Faculdade=Impacta"
+      - "Turma=FS"
+      - "maintener=Lucas <lucas.hayashi@faculdade>"
+    container_name: nginx-impacta
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_TCP_PORT: 3306
+    labels:
+      - "Faculdade=Impacta"
+      - "Turma=FS"
+      - "maintener=Lucas <lucas.hayashi@faculdade>"
+    container_name: mysql-impacta
