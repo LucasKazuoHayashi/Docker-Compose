@@ -3,7 +3,7 @@ services:
   nginx:
     image: nginx
     ports:
-      - 8080:80
+      - 80:80
     labels:
       - "Faculdade=Impacta"
       - "Turma=FS"
@@ -14,8 +14,9 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_TCP_PORT: 3306
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - 3306:3306
     labels:
       - "Faculdade=Impacta"
       - "Turma=FS"

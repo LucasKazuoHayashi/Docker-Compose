@@ -8,4 +8,4 @@ Compilar a imagem docker-compose localmente
 
 docker-compose up -d
 
-curl http://localhost:8080
+curl http://localhost:80
